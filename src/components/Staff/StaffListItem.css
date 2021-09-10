@@ -1,0 +1,18 @@
+.staff-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20%;
+}
+
+.staff-img img {
+    height: 140px;
+}
+
+p {
+    font-family: "Lato",
+    sans-serif;
+    font-size: 13px;
+    color: #8d8d8d;
+    padding: 10px 0;
+    line-height: 20px;
+  }

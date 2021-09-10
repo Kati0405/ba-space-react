@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90px;
+    line-height: 90px;
+    
+}
+
+.navbar-item {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    border-left: 1px solid #1d1d1d;
+    padding: 0 12px;
+    color: #8d8d8d;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    height: 90px;
+}
+
+.navbar-item:hover {
+    color: white;
+}
+
+@media(max-width:1240px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        background: black;
+        height: auto;
+        position: absolute;
+        right: -10px;
+        align-items: flex-start;
+    }
+    .navbar-item {
+        border: none;
+    }
+
+}

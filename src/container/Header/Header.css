@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  height: 90px;
+  position: sticky;
+  border-bottom: 1px solid #1d1d1d;
+  top: 0;
+  z-index: 100;
+  padding: 0 10px;
+}
+
+.header-logo {
+  height: 90px;
+  line-height: 90px;
+  padding: 11px 0;
+}
+
+@media(max-width:1240px) {
+  .col-hidden {
+      display: none;
+  }
+}
+
+@media(max-width:1240px) {
+  .mobile-navbar {
+    display: block;
+    position: relative;
+  }
+}
+
+@media(min-width:1239px) {
+  .mobile-navbar {
+    display: none;
+  }
+}

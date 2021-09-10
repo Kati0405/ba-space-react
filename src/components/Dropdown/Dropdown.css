@@ -1,0 +1,43 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    display: flex;
+    position: relative;
+}
+
+.dropdown-btn:hover {
+    color: white;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    width: 100%;
+}
+
+.dropdown-item {
+    line-height: 40px;
+    cursor: pointer;
+    color: #8d8d8d;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+}
+
+.dropdown-item:hover{
+    color: white;
+}
+
+@media(max-width:1240px) {
+    .dropdown-content {
+        position: absolute;
+        right: 142px;
+    }
+}

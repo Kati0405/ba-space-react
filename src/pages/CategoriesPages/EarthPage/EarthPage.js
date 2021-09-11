@@ -10,6 +10,7 @@ const useStyles = makeStyles({
         fontFamily: 'Lato',
         fontWeight: '700',
         textAlign: 'center',
+        color: '#8d8d8d',
     },
 
     blackFont: {

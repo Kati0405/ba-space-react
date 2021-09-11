@@ -6,6 +6,8 @@ import PropTypes from 'prop-types'
 import { Button } from '@material-ui/core'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const ArticlesListItem = ({
     image,
@@ -22,7 +24,9 @@ const ArticlesListItem = ({
                 <div className="preview">
                     <img src={image} alt="" />
                 </div>
-                <button className="category-btn">{category}</button>
+                <button className="category-btn">
+                    <Link to={'/' + category}>{category}</Link>
+                </button>
                 <div>
                     <Button>
                         {isLiked ? (
@@ -58,4 +62,8 @@ ArticlesListItem.propTypes = {
     comments: PropTypes.number.isRequired,
 }
 
-export default ArticlesListItem
+const mapStateToProps = (state, { id }) => ({
+    isLiked: state[id],
+})
+
+export default connect(mapStateToProps)(ArticlesListItem)

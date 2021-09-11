@@ -15,9 +15,17 @@
     letter-spacing: 2px;
 }
 
-.category-btn:hover {
+.category-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.category-btn:hover{
     background-color: white;
-    color: black;
+}
+
+.category-btn:hover a{
+    color: black;  
 }
 
 .article-item {

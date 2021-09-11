@@ -26,6 +26,7 @@ const ArticlesList = () => {
                         }) => (
                             <Grid key={id} item xs={12} sm={6} md={4}>
                                 <ArticlesListItem
+                                    id={id}
                                     image={image}
                                     category={category}
                                     text={text}

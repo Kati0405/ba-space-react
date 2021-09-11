@@ -29,7 +29,7 @@ const articlesArray = [
     {
         id: 4,
         image: '/images/art4.png',
-        category: 'Earth',
+        category: 'Universe',
         text: 'How big is a black hole? How messily it eats may be a clue.',
         date: '16 December 2021',
         likes: 998,
@@ -38,7 +38,7 @@ const articlesArray = [
     {
         id: 5,
         image: '/images/art5.jpg',
-        category: 'Earth',
+        category: 'Science',
         text: 'Cygnus cargo ship arrives at International Space Station with its biggest NASA haul ever',
         date: '05 April 2021',
         likes: 934,
@@ -63,5 +63,14 @@ const articlesArray = [
         comments: 19,
     },
 ]
+
+export const getArticlesObject = (array) =>
+    array.reduce(
+        (obj, article) => ({
+            ...obj,
+            [article.id]: article,
+        }),
+        {}
+    )
 
 export default articlesArray

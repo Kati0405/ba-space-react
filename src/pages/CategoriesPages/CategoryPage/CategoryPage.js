@@ -10,7 +10,8 @@ const useStyles = makeStyles({
         fontFamily: 'Lato',
         fontWeight: '700',
         textAlign: 'center',
-        color: '#8d8d8d',
+        color: 'white',
+        textTransform: 'capitalize',
     },
 
     blackFont: {
@@ -18,13 +19,13 @@ const useStyles = makeStyles({
     },
 })
 
-const SciencePage = () => {
+const CategoryPage = ({ categoryName }) => {
     const classes = useStyles()
-    const newArr = articlesArray.filter((x) => x.category === 'Science')
+    const newArr = articlesArray.filter((x) => x.category === categoryName)
     return (
         <>
             <Grid className={classes.blackFont}>
-                <h3 className={classes.h3}>Category: Science</h3>
+                <h3 className={classes.h3}>Category: {categoryName}</h3>
                 <Grid
                     container
                     direction="row"
@@ -60,4 +61,4 @@ const SciencePage = () => {
     )
 }
 
-export default SciencePage
+export default CategoryPage

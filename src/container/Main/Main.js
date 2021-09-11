@@ -5,11 +5,7 @@ import ArticlesSection from '../../components/ArticlesSection/ArticlesSection'
 import StaffSection from '../../components/StaffSection/StaffSection'
 import ContactsSection from '../../components/ContactsSection/ContactsSection'
 import ContactsPage from '../../pages/Contacts/ContactsPage'
-import EarthPage from '../../pages/CategoriesPages/EarthPage/EarthPage'
-import PlanetPage from '../../pages/CategoriesPages/PlanetPage/PlanetPage'
-import TechnologyPage from '../../pages/CategoriesPages/TechnologyPage/TechnologyPage'
-import SciencePage from '../../pages/CategoriesPages/SciencePage/SciencePage'
-import UniversePage from '../../pages/CategoriesPages/UniversePage/UniversePage'
+import CategoryPage from '../../pages/CategoriesPages/CategoryPage/CategoryPage'
 
 const Main = () => {
     return (
@@ -19,11 +15,31 @@ const Main = () => {
             <Route path="/" exact component={StaffSection} />
             <Route path="/" exact component={ContactsSection} />
             <Route path="/contacts" exact component={ContactsPage} />
-            <Route path="/earth" exact component={EarthPage} />
-            <Route path="/planet" exact component={PlanetPage} />
-            <Route path="/technology" exact component={TechnologyPage} />
-            <Route path="/science" exact component={SciencePage} />
-            <Route path="/universe" exact component={UniversePage} />
+            <Route
+                path="/earth"
+                exact
+                render={() => <CategoryPage categoryName="earth" />}
+            />
+            <Route
+                path="/planet"
+                exact
+                render={() => <CategoryPage categoryName="planet" />}
+            />
+            <Route
+                path="/science"
+                exact
+                render={() => <CategoryPage categoryName="science" />}
+            />
+            <Route
+                path="/technology"
+                exact
+                render={() => <CategoryPage categoryName="technology" />}
+            />
+            <Route
+                path="/universe"
+                exact
+                render={() => <CategoryPage categoryName="universe" />}
+            />
         </>
     )
 }

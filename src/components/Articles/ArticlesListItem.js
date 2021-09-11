@@ -3,8 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons'
 import './ArticlesListItem.css'
 import PropTypes from 'prop-types'
+import { Button } from '@material-ui/core'
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 
-const ArticlesListItem = ({ image, category, text, date, likes, comments }) => {
+const ArticlesListItem = ({
+    image,
+    category,
+    text,
+    date,
+    likes,
+    comments,
+    isLiked = false,
+}) => {
     return (
         <>
             <div className="article-item">
@@ -12,6 +23,15 @@ const ArticlesListItem = ({ image, category, text, date, likes, comments }) => {
                     <img src={image} alt="" />
                 </div>
                 <button className="category-btn">{category}</button>
+                <div>
+                    <Button>
+                        {isLiked ? (
+                            <FavoriteIcon className="like" />
+                        ) : (
+                            <FavoriteBorderIcon className="like" />
+                        )}
+                    </Button>
+                </div>
                 <h3 className="article-text">{text}</h3>
                 <div className="info-block">
                     <span className="date">{date}</span>

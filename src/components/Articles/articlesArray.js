@@ -20,7 +20,7 @@ const articlesArray = [
     {
         id: 3,
         image: '/images/art3.jpg',
-        category: 'Science',
+        category: 'Earth',
         text: 'The devastating wildfires of 2021 are breaking records and satellites are tracking it all',
         date: '18 October 2021',
         likes: 237,
@@ -29,7 +29,7 @@ const articlesArray = [
     {
         id: 4,
         image: '/images/art4.png',
-        category: 'Technology',
+        category: 'Earth',
         text: 'How big is a black hole? How messily it eats may be a clue.',
         date: '16 December 2021',
         likes: 998,
@@ -43,6 +43,24 @@ const articlesArray = [
         date: '05 April 2021',
         likes: 934,
         comments: 5,
+    },
+    {
+        id: 6,
+        image: '/images/art6.jpg',
+        category: 'Universe',
+        text: "Our Milky Way galaxy isn't very well mixed, study suggests",
+        date: '22 September 2021',
+        likes: 45,
+        comments: 2,
+    },
+    {
+        id: 7,
+        image: '/images/art7.jpg',
+        category: 'Technology',
+        text: "Launch of SpaceX's private Inspiration4 mission slips by 24 hours",
+        date: '07 August 2021',
+        likes: 89,
+        comments: 19,
     },
 ]
 

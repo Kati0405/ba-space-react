@@ -6,6 +6,7 @@ import StaffSection from '../../components/StaffSection/StaffSection'
 import ContactsSection from '../../components/ContactsSection/ContactsSection'
 import ContactsPage from '../../pages/Contacts/ContactsPage'
 import CategoryPage from '../../pages/CategoriesPages/CategoryPage/CategoryPage'
+import ArticlePage from '../../pages/ArticlePage'
 
 const Main = () => {
     return (
@@ -40,6 +41,7 @@ const Main = () => {
                 exact
                 render={() => <CategoryPage categoryName="universe" />}
             />
+            <Route path="/article/:articleId" exact component={ArticlePage} />
         </>
     )
 }

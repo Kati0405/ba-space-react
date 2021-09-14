@@ -10,6 +10,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const ArticlesListItem = ({
+    id,
     image,
     category,
     text,
@@ -36,7 +37,9 @@ const ArticlesListItem = ({
                         )}
                     </Button>
                 </div>
-                <h3 className="article-text">{text}</h3>
+                <h3 className="article-text">
+                    <Link to={'/article/' + id}>{text}</Link>
+                </h3>
                 <div className="info-block">
                     <span className="date">{date}</span>
                     <span className="likes">

@@ -62,18 +62,27 @@
 }
 
 .article-text {
-    font-family: 'Lato', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
     padding: 15px 0;
     padding-top: 60px;
     padding-left: 25px;
     padding-right: 25px;
     position: relative;
-    color: white;
     cursor: pointer;
     z-index: 10;
 }
+
+.article-text a {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+.article-text:hover a {
+    color: #8d8d8d; 
+}
+
 
 .info-block {
     padding-left: 25px;
